@@ -13,7 +13,7 @@
 # limitations under the License.
 
 # Platform path
-PLATFORM_COMMON_PATH := device/sony/yoshino
+PLATFORM_COMMON_PATH := device/sony/yoshino-common
 
 PRODUCT_PLATFORM := yoshino
 TARGET_BOARD_PLATFORM := msm8998
@@ -94,4 +94,4 @@ TARGET_USES_HWC2 := true
 # FPC verstion select
 TARGET_FPC_VERSION := N
 
-include device/sony/common/CommonConfig.mk
+include device/sony/common/ChooseCommonConfig.mk

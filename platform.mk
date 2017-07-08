@@ -13,9 +13,9 @@
 # limitations under the License.
 
 # Platform path
-PLATFORM_COMMON_PATH := device/sony/yoshino
+PLATFORM_COMMON_PATH := device/sony/yoshino-common
 
-$(call inherit-product, device/sony/common/common.mk)
+$(call inherit-product, device/sony/common/choose_common.mk)
 $(call inherit-product, $(SRC_TARGET_DIR)/product/core_64_bit.mk)
 
 SOMC_PLATFORM := yoshino
