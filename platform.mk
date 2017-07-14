@@ -17,6 +17,7 @@ PLATFORM_COMMON_PATH := device/sony/yoshino-common
 
 $(call inherit-product, device/sony/common/choose_common.mk)
 $(call inherit-product, $(SRC_TARGET_DIR)/product/core_64_bit.mk)
+$(call inherit-product, $(PLATFORM_COMMON_PATH)/recovery/twrp.mk)
 
 SOMC_PLATFORM := yoshino
 
