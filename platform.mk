@@ -62,9 +62,11 @@ PRODUCT_COPY_FILES += \
 PRODUCT_COPY_FILES += \
     $(SONY_ROOT)/vendor/etc/rqbalance_config.xml:$(TARGET_COPY_OUT_VENDOR)/etc/rqbalance_config.xml
 
-# Platform power  configuration
+# Platform specific init
 PRODUCT_PACKAGES += \
-    init.yoshino.pwr
+    init.yoshino \
+    init.yoshino.pwr \
+    ueventd
 
 # Audio
 PRODUCT_PACKAGES += \
@@ -88,10 +90,6 @@ PRODUCT_PACKAGES += \
 # Keymaster
 PRODUCT_PACKAGES += \
     keystore.msm8998
-
-# OpenGLES Nougat version
-PRODUCT_PROPERTY_OVERRIDES += \
-    ro.opengles.version=196610
 
 # QCOM Bluetooth
 PRODUCT_PROPERTY_OVERRIDES += \
