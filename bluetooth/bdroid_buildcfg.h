@@ -28,17 +28,6 @@ static inline const char* getBTDefaultName()
 
     if (!strcmp("maple", device)) {
         return "Xperia XZ Premium";
-    }
-
-    if (!strcmp("poplar", device)) {
-        return "Xperia XZ1";
-    }
-
-    if (!strcmp("lilac", device)) {
-        return "Xperia XZ1 Compact";
-    }
-
-    return "Xperia";
 }
 
 #define BTM_DEF_LOCAL_NAME getBTDefaultName()
