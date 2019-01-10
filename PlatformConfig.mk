@@ -31,8 +31,6 @@ TARGET_2ND_CPU_ABI := armeabi-v7a
 TARGET_2ND_CPU_ABI2 := armeabi
 TARGET_2ND_CPU_VARIANT := cortex-a73
 
-TARGET_USES_64_BIT_BINDER := true
-
 BOARD_CACHEIMAGE_FILE_SYSTEM_TYPE := ext4
 
 BOARD_KERNEL_BASE        := 0x80000000
@@ -76,12 +74,10 @@ WCNSS_FILTER_USES_SIBS := true
 TARGET_PER_MGR_ENABLED := true
 
 # SELinux
-BOARD_SEPOLICY_DIRS += $(PLATFORM_COMMON_PATH)/sepolicy_platform
+BOARD_VENDOR_SEPOLICY_DIRS += $(PLATFORM_COMMON_PATH)/sepolicy_platform
 
 # Display
 TARGET_HAS_HDR_DISPLAY := true
-
-# FPC version select
-TARGET_FPC_VERSION := N
+TARGET_USES_GRALLOC1 := true
 
 include device/sony/common/CommonConfig.mk

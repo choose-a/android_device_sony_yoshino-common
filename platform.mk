@@ -37,7 +37,8 @@ PRODUCT_COPY_FILES += \
 # Audio
 PRODUCT_COPY_FILES += \
     $(SONY_ROOT)/vendor/etc/audio_tuning_mixer_tasha.txt:$(TARGET_COPY_OUT_VENDOR)/etc/audio_tuning_mixer_tasha.txt \
-    $(SONY_ROOT)/vendor/etc/audio_platform_info.xml:$(TARGET_COPY_OUT_VENDOR)/etc/audio_platform_info.xml
+    $(SONY_ROOT)/vendor/etc/audio_platform_info.xml:$(TARGET_COPY_OUT_VENDOR)/etc/audio_platform_info.xml \
+    $(SONY_ROOT)/vendor/etc/audio_policy_configuration.xml:$(TARGET_COPY_OUT_VENDOR)/etc/audio_policy_configuration.xml
 
 # Media
 PRODUCT_COPY_FILES += \
@@ -96,8 +97,12 @@ PRODUCT_PACKAGES += \
     camera.msm8998
 
 # QCOM Bluetooth
+PRODUCT_PACKAGES += \
+    android.hardware.bluetooth@1.0-impl-qti \
+    android.hardware.bluetooth@1.0-service-qti
+
 PRODUCT_PROPERTY_OVERRIDES += \
-    qcom.bluetooth.soc=cherokee
+    vendor.qcom.bluetooth.soc=cherokee
 
 # Fluence
 PRODUCT_PROPERTY_OVERRIDES += \
@@ -156,7 +161,7 @@ PRODUCT_PROPERTY_OVERRIDES += \
 
 #WiFi MAC address path
 PRODUCT_PROPERTY_OVERRIDES += \
-    ro.wifi.addr_path=/data/misc/wifi/wlan_mac.bin
+    ro.wifi.addr_path=/data/vendor/wifi/wlan_mac.bin
 
 # setup dm-verity configs.
 PRODUCT_SYSTEM_VERITY_PARTITION := /dev/block/platform/soc/1da4000.ufshc/by-name/system
